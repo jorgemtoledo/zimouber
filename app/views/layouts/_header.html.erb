@@ -30,18 +30,30 @@
                         </button>
                     </div>
                 </div>
-            </form>
-
+            </form>            
             <ul class="navbar-nav m-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Jose Maria</a>
-                </li>
-                <li class="nav-item" style="margin-top: 8px; color: white;">
-                    |
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Sair</a>
-                </li>
+                <% if user_signed_in? %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dashboard">Minha conta</a>
+                    </li>
+                    <li class="nav-item" style="margin-top: 8px; color: white;">
+                        |
+                    </li>
+                    <li class="nav-item">
+                        <%= link_to('Sair', destroy_user_session_path, class: 'nav-link', method: :delete) %>  
+                    </li>
+                <% end %>
+                <% if !user_signed_in? %>
+                    <li class="nav-item">
+                        <%= link_to "Login".html_safe, new_user_session_path, class: "nav-link" %>
+                    </li>
+                    <li class="nav-item" style="margin-top: 8px; color: white;">
+                        |
+                    </li>
+                    <li class="nav-item">
+                        <%= link_to('Cadastrar', new_user_registration_path,  class: 'nav-link') %>
+                    </li>
+                <% end %>
             </ul>
         </div>
     </div>

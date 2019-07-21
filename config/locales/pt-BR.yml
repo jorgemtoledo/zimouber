@@ -1,0 +1,8 @@
+pt-BR:
+  # Message errors
+  errors:
+    messages:
+  devise:
+    registrations:
+      customer:
+        uh oh! no pasword!
