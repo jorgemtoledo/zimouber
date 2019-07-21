@@ -1,6 +1,11 @@
 footer {
   background: #343a40;
+  position: fixed;
+  height: 40px;
+  bottom: 0;
+  width: 100%;
 }
+
 footer a {
   color: #f8f9fa!important
 }
