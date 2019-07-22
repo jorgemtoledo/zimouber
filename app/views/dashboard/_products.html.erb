@@ -1,107 +1,39 @@
 <div class="col">
     <h1 class="page-header">Meus imóveis</h1>
+    <hr>
     <div class="row">
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card">
-                <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="row">
-                        <div class="col">
-                            <p class="btn btn-danger btn-block">R$ 99.00</p>
-                        </div>
-                        <div class="col">
-                            <a href="#" class="btn btn-success btn-block">Ver</a>
-                        </div>
-                    </div>
-                </div>
+      <div class="col-sm-9 col-md-9 col-lg-12">
+        <div class="card card-signin">
+          <div class="card-body">
+          <h3>Cadastrar</h3>
+          <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Imagem</th>
+                  <th>Titulo</th>
+                  <th>Texto</th>
+                  <th colspan="3">Ações</th>
+                </tr>
+                </thead>
+                <tbody>
+                <% @properties.each do |property| %>
+                <tr>
+                  <td><%= property.id %></td>
+                  <td>Images</td>
+                  <td><%= property.title %></td>
+                  <td><%= property.description.gsub("\n", "<br>").html_safe.truncate(40) %></td>
+                  <td><%= link_to tag.i(class: 'fas fa-eye'), "/blog/#{property.id}", target: "_blank" %> </td>
+                  <td><%= link_to tag.i(class: 'fas fa-edit'), edit_property_path(property) %></td>
+                  <td><%= link_to tag.i(class: 'fas fa-trash'), property, method: :delete, data: { confirm: 'Tem certeza em apagar?' } %></td>
+                </tr>
+                <% end %>
+                </tbody>
+              </table>
+            </div>              
             </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card">
-                <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="row">
-                        <div class="col">
-                            <p class="btn btn-danger btn-block">R$ 99.00</p>
-                        </div>
-                        <div class="col">
-                            <a href="#" class="btn btn-success btn-block">Ver</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card">
-                <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="row">
-                        <div class="col">
-                            <p class="btn btn-danger btn-block">R$ 99.00</p>
-                        </div>
-                        <div class="col">
-                            <a href="#" class="btn btn-success btn-block">Ver</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card">
-                <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="row">
-                        <div class="col">
-                            <p class="btn btn-danger btn-block">R$ 99.00</p>
-                        </div>
-                        <div class="col">
-                            <a href="#" class="btn btn-success btn-block">Ver</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card">
-                <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="row">
-                        <div class="col">
-                            <p class="btn btn-danger btn-block">R$ 99.00</p>
-                        </div>
-                        <div class="col">
-                            <a href="#" class="btn btn-success btn-block">Ver</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card">
-                <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="row">
-                        <div class="col">
-                            <p class="btn btn-danger btn-block">R$ 99.00</p>
-                        </div>
-                        <div class="col">
-                            <a href="#" class="btn btn-success btn-block">Ver</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>     
     </div>
 </div>

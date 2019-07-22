@@ -1,8 +1,7 @@
-class DashboardController < ApplicationController
+class UsersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @properties = Property.my_own(current_user.id)
   end
 
   def show

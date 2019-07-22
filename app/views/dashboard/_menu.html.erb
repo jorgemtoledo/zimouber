@@ -3,7 +3,11 @@
         <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i> Menu</div>
         <ul class="list-group category_block">
             <li class="list-group-item"><a href="/"><i class="fa fa-id-card"></i> Meu Perfil</a></li>
-            <li class="list-group-item"><a href="/"><i class="fa fa-home"></i> Cadastrar</a></li>
+            <li class="list-group-item">
+                <%= link_to new_property_path do %>
+                    <i class="fa fa-home"></i> Cadastrar
+                <% end %>
+            </li>
         </ul>
     </div>
 </div>
