@@ -1,2 +1,20 @@
-<h1>Properties#edit</h1>
-<p>Find me in app/views/properties/edit.html.erb</p>
+<%= render "dashboard/breadcrumb" %>
+<div class="container">
+  <div class="row">
+    <%= render "dashboard/menu" %>
+    <div class="col">
+      <h1 class="page-header">Meus imóveis</h1>
+      <hr>
+      <div class="row"> 
+        <div class="col-sm-9 col-md-9 col-lg-12">
+          <div class="card card-signin">
+            <div class="card-body">
+              <h3>Editar</h3>          
+              <%= render 'form', address: @property %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><br>

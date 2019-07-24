@@ -1,0 +1,57 @@
+<%= render "jumbotron" %>
+<%= render "breadcrumb" %>
+
+<div class="container">
+  <div class="row">
+    <%= render "category" %>
+    <div class="col">
+      <h1 class="page-header">Imóvel</h1>
+      <hr>
+      <div class="row"> 
+        <div class="col-sm-9 col-md-9 col-lg-12">
+          <div class="card card-signin">
+            <div class="card-body">
+              <div class="card">
+                  <div class="container-fliud">
+                    <div class="wrapper row">
+                      <div class="preview col-md-6">                        
+                        <div class="preview-pic tab-content">
+                          <div class="tab-pane active" id="pic-1"> <%= image(@property)%></div>
+                          <div class="tab-pane" id="pic-2"><%= image(@property)%></div>
+                          <div class="tab-pane" id="pic-3"><%= image(@property)%></div>
+                          <div class="tab-pane" id="pic-4"><%= image(@property)%></div>
+                          <div class="tab-pane" id="pic-5"><%= image(@property)%></div>
+                        </div>
+                        <ul class="preview-thumbnail nav nav-tabs">
+                          <li class="active"><a data-target="#pic-1" data-toggle="tab"><%= image(@property)%></a></li>
+                          <li><a data-target="#pic-2" data-toggle="tab"><%= image(@property)%></a></li>
+                          <li><a data-target="#pic-3" data-toggle="tab"><%= image(@property)%></a></li>
+                          <li><a data-target="#pic-4" data-toggle="tab"><%= image(@property)%></a></li>
+                          <li><a data-target="#pic-5" data-toggle="tab"><%= image(@property)%></a></li>
+                        </ul>                        
+                      </div>
+                      <div class="details col-md-6">
+                        <h3 class="product-title"><%= @property.title %></h3>
+                        <div class="rating">
+                          <div class="stars">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                          </div>
+                          <span class="review-no">41 Views</span>
+                        </div>
+                        <p class="product-description"><%= @property.description.html_safe.truncate(200) %></</p>
+                        <h4 class="price">Valor: <span><%= number_to_currency(@property.value, unit: "R$", separator: ",", delimiter: "")%></span></h4>                      
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+            </div>
+          </div>          
+        </div>
+      </div>
+    </div>
+  </div>
+</div><br>

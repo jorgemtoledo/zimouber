@@ -1,124 +1,29 @@
 <div class="col">
     <div class="row">
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card">
-                <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="row">
-                        <div class="col">
-                            <p class="btn btn-danger btn-block">R$ 99.00</p>
-                        </div>
-                        <div class="col">
-                            <a href="#" class="btn btn-success btn-block">Ver</a>
-                        </div>
+    <% @properties.each do |property| %>
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+            
+            <%= image(property)%>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <a href="site/<%= property.id %>" title="View Product"><%= property.title %></a>
+                </h4>
+                <p class="card-text"><%= property.description.html_safe.truncate(90) %></p>
+                <div class="row">
+                    <div class="col">
+                        <p><%= number_to_currency(property.value, unit: "R$", separator: ",", delimiter: "")%></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <a href="site/<%= property.id %>" class="btn btn-success btn-block">Ver</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card">
-                <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="row">
-                        <div class="col">
-                            <p class="btn btn-danger btn-block">R$ 99.00</p>
-                        </div>
-                        <div class="col">
-                            <a href="#" class="btn btn-success btn-block">Ver</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card">
-                <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="row">
-                        <div class="col">
-                            <p class="btn btn-danger btn-block">R$ 99.00</p>
-                        </div>
-                        <div class="col">
-                            <a href="#" class="btn btn-success btn-block">Ver</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card">
-                <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="row">
-                        <div class="col">
-                            <p class="btn btn-danger btn-block">R$ 99.00</p>
-                        </div>
-                        <div class="col">
-                            <a href="#" class="btn btn-success btn-block">Ver</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card">
-                <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="row">
-                        <div class="col">
-                            <p class="btn btn-danger btn-block">R$ 99.00</p>
-                        </div>
-                        <div class="col">
-                            <a href="#" class="btn btn-success btn-block">Ver</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card">
-                <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="row">
-                        <div class="col">
-                            <p class="btn btn-danger btn-block">R$ 99.00</p>
-                        </div>
-                        <div class="col">
-                            <a href="#" class="btn btn-success btn-block">Ver</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>
+    <% end %>
 
-        <div class="col-12 col-md-6 col-lg-4">
-                <div class="card">
-                    <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
-                    <div class="card-body">
-                        <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <div class="row">
-                            <div class="col">
-                                <p class="btn btn-danger btn-block">R$ 99.00</p>
-                            </div>
-                            <div class="col">
-                                <a href="#" class="btn btn-success btn-block">Ver</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
     </div>
 </div>
