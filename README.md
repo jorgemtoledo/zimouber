@@ -1,24 +1,35 @@
-# README
+# ZIMOUBER
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![ruby](https://img.shields.io/badge/Ruby-2.5.1-red.svg)
+![rails](https://img.shields.io/badge/Rails-5.2.1-red.svg)
+![mysql](https://img.shields.io/mysql/automated/jrottenberg/ffmpeg.svg)
+![bootstrap4](https://img.shields.io/bootstrap4/d6c1ddd0-16a3-0132-5f85-2e35c05e22b1.svg)
 
-Things you may want to cover:
+## Index
 
-* Ruby version
+- [ZIMOUBER](#zimouber)
+  - [Index](#index)
+  - [Imagens](#imagens)
+  - [Instalacao](#instalacao)
+  - [Versioning](#versioning)
+  - [Authors](#authors)
 
-* System dependencies
+## Imagens
+![Zimouber](https://github.com/jorgemtoledo/zimouber/blob/master/zi_01.png)
+![Zimouber](https://github.com/jorgemtoledo/zimouber/blob/master/zi_02.png)
+![Zimouber](https://github.com/jorgemtoledo/zimouber/blob/master/zi_03.png)
+![Zimouber](https://github.com/jorgemtoledo/zimouber/blob/master/zi_04.png)
 
-* Configuration
+## Instalacao
+Ruby
+Ruby on Rails
+Mysql
+Comandos: rails db:create db:migrate db:seed
+Acesse o app na url localhost:3000.
 
-* Database creation
+## Versioning
+1.0.0.0
 
-* Database initialization
+## Authors
+* **Jorge Toledo** 
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
