@@ -2,8 +2,6 @@
 
 ![ruby](https://img.shields.io/badge/Ruby-2.5.1-red.svg)
 ![rails](https://img.shields.io/badge/Rails-5.2.1-red.svg)
-![mysql](https://img.shields.io/mysql/automated/jrottenberg/ffmpeg.svg)
-![bootstrap4](https://img.shields.io/bootstrap4/d6c1ddd0-16a3-0132-5f85-2e35c05e22b1.svg)
 
 ## Index
 
@@ -21,11 +19,12 @@
 ![Zimouber](https://github.com/jorgemtoledo/zimouber/blob/master/zi_04.png)
 
 ## Instalacao
-Ruby
-Ruby on Rails
-Mysql
-Comandos: rails db:create db:migrate db:seed
-Acesse o app na url localhost:3000.
+* Clone o projeto na sua maquina
+* Ruby
+* Ruby on Rails
+* Mysql
+* Comandos: rails db:create db:migrate db:seed
+* Acesse o app na url localhost:3000.
 
 ## Versioning
 1.0.0.0
